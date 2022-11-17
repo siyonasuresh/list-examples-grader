@@ -18,7 +18,7 @@ cp ../TestListExamples.java ./testdir
  
 cd ./testdir
 set +e
-javac -cp ".;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar" ListExamples.java
+javac -cp ".;../../lib/hamcrest-core-1.3.jar;../../lib/junit-4.13.2.jar" *.java
 if [ $? -eq 0 ]
 then
     echo "Compiled Successfully. :)"
@@ -26,7 +26,7 @@ else
     echo "Did not Compile Successfully. :("
 fi
  
-java ListExamples
+java TestListExamples
 if [ $? -eq 0 ]
 then
     echo "Java Ran Successfully. :)"
